@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+}
+
+#container{
+    width: 100%;
+    height: 100%; 
+    background: rgb(62,62,62);
+    background: linear-gradient(90deg, rgba(62,62,62,1) 0%, rgba(38,38,38,1) 27%, rgba(38,38,38,1) 28%, rgba(18,16,16,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player{
+    background: rgb(19,19,19);
+    background: linear-gradient(94deg, rgba(19,19,19,1) 0%, rgba(43,43,43,1) 59%, rgba(59,59,59,1) 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid #383737;
+    width:60%;
+    min-height: 600px;
+    aspect-ratio: 16 / 9;
+    max-height: 80%;
+}
+.nav {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.8rem;
+    width: 100%;
+    padding-left: 4rem;
+    padding-top: 1rem; 
+}
+.display{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    /* background: url(music/calma.jpg); */
+    background-size: cover;
+    animation: cdRotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-details {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.music-details>.music-name {
+    font-size: 3rem;
+}
+.music-details>.artist-name {
+    font-size: 1.4rem;
+}
+
+.controls {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.controls .control-btns{
+    padding: max(10px, 4%);
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.2s linear;
+}
+
+.controls .progressBar{
+    height: 3px;
+    width: 80%;
+    border: 1px solid #ffffff;
+    top: 0;
+}
+.controls .progress{
+    height: 100%;
+    width: 50%;
+    background: #dbdbdb;
+}
+
+.player button {
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+
+.player .display .play-previous-btn{
+    background: url(icon/white/icons8-less-than-50.png);
+    background-size: cover;
+}  
+
+.player .play-pause-btn{
+    background: url(icon/white/icons8-play-50-3.png);
+    background-size: cover;
+}
+
+.player .display .play-next-btn{
+    background: url(icon/white/icons8-more-than-50.png);
+    background-size: cover;
+}
+
+.player .display button:hover{
+    background-color: rgba(110, 105, 105, 0.534);
+}
+
+
+@keyframes cdRotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
